@@ -40,14 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\BombedMazeFactory.cs" />
     <Compile Include="Factories\EnchantedMazeFactory.cs" />
     <Compile Include="Factories\ICreateMazes.cs" />
     <Compile Include="Products\Doors\DoorNeedingSpell.cs" />
+    <Compile Include="Products\Rooms\RoomWithABomb.cs" />
+    <Compile Include="Products\Walls\BombedWall.cs" />
     <Compile Include="Spell.cs" />
     <Compile Include="Products\Rooms\EnchantedRoom.cs" />
     <Compile Include="Products\Doors\Door.cs" />
     <Compile Include="Factories\MazeFactory.cs" />
-    <Compile Include="Factories\AbstractMazeFactory.cs" />
     <Compile Include="Products\MapSite.cs" />
     <Compile Include="Products\Mazes\Maze.cs" />
     <Compile Include="MazeGame.cs" />
