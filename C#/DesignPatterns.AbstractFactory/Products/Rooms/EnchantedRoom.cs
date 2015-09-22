@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.AbstractFactory
 {
-    public class EnchantedRoom : RoomBase
+    public class EnchantedRoom : Room
     {
         private Spell _spell;
 

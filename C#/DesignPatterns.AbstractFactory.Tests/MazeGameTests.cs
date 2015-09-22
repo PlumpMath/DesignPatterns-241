@@ -8,18 +8,39 @@ namespace DesignPatterns.AbstractFactory.Tests
     public class MazeGameTests
     {
         [Test]
+        public void CanCreateEnchantedMaze()
+        {
+            // Arrange
+            var factory = new EnchantedMazeFactory();
+            var game = new MazeGame(factory);
+
+            // Act
+            var maze = game.CreateMaze();
+            var firstRoom = maze.GetRoom(1);
+            var door = firstRoom.GetSide(Direction.East);
+
+            // Assert
+            maze.Should().NotBeNull();
+            firstRoom.Should().BeOfType<EnchantedRoom>();
+            door.Should().BeOfType<DoorNeedingSpell>();
+        }
+
+        [Test]
         public void CanCreateMazes()
         {
             // Arrange
-            var game = new MazeGame();
             var factory = new MazeFactory();
+            var game = new MazeGame(factory);
 
             // Act
-            var result = game.CreateMaze(factory);
+            var maze = game.CreateMaze();
+            var firstRoom = maze.GetRoom(1);
+            var door = firstRoom.GetSide(Direction.East);
 
             // Assert
-            result.Should().NotBeNull();
-            result.Should().BeOfType<Maze>();
+            maze.Should().NotBeNull();
+            firstRoom.Should().BeOfType<Room>();
+            door.Should().BeOfType<Door>();
         }
     }
 }

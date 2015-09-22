@@ -1,13 +1,13 @@
 ﻿namespace DesignPatterns.AbstractFactory
 {
-    public abstract class MazeFactoryBase
+    public abstract class MazeFactoryBase : IBuildMazes
     {
-        public abstract DoorBase CreateDoor(RoomBase room1, RoomBase room2);
+        public abstract Door CreateDoor(Room room1, Room room2);
 
-        public abstract MazeBase CreateMaze();
+        public abstract Maze CreateMaze();
 
-        public abstract RoomBase CreateRoom(int roomNumber);
+        public abstract Room CreateRoom(int roomNumber);
 
-        public abstract WallBase CreateWall();
+        public abstract Wall CreateWall();
     }
 }

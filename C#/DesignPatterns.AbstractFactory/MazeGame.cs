@@ -2,24 +2,31 @@
 {
     public class MazeGame
     {
-        public MazeBase CreateMaze(MazeFactoryBase factory)
+        private readonly IBuildMazes _factory;
+
+        public MazeGame(IBuildMazes factory)
         {
-            var maze = factory.CreateMaze();
-            var room1 = factory.CreateRoom(1);
-            var room2 = factory.CreateRoom(2);
-            var door = factory.CreateDoor(room1, room2);
+            _factory = factory;
+        }
+
+        public Maze CreateMaze()
+        {
+            var maze = _factory.CreateMaze();
+            var room1 = _factory.CreateRoom(1);
+            var room2 = _factory.CreateRoom(2);
+            var door = _factory.CreateDoor(room1, room2);
 
             maze.AddRoom(room1);
             maze.AddRoom(room2);
 
-            room1.SetSide(Direction.North, factory.CreateWall());
+            room1.SetSide(Direction.North, _factory.CreateWall());
             room1.SetSide(Direction.East, door);
-            room1.SetSide(Direction.South, factory.CreateWall());
-            room1.SetSide(Direction.West, factory.CreateWall());
+            room1.SetSide(Direction.South, _factory.CreateWall());
+            room1.SetSide(Direction.West, _factory.CreateWall());
 
-            room2.SetSide(Direction.North, factory.CreateWall());
-            room2.SetSide(Direction.East, factory.CreateWall());
-            room2.SetSide(Direction.South, factory.CreateWall());
+            room2.SetSide(Direction.North, _factory.CreateWall());
+            room2.SetSide(Direction.East, _factory.CreateWall());
+            room2.SetSide(Direction.South, _factory.CreateWall());
             room2.SetSide(Direction.West, door);
 
             return maze;

@@ -2,22 +2,22 @@
 {
     public class MazeFactory : MazeFactoryBase
     {
-        public override MazeBase CreateMaze()
+        public override Maze CreateMaze()
         {
             return new Maze();
         }
 
-        public override RoomBase CreateRoom(int roomNumber)
+        public override Room CreateRoom(int roomNumber)
         {
             return new Room(roomNumber);
         }
 
-        public override DoorBase CreateDoor(RoomBase room1, RoomBase room2)
+        public override Door CreateDoor(Room room1, Room room2)
         {
             return new Door(room1, room2);
         }
 
-        public override WallBase CreateWall()
+        public override Wall CreateWall()
         {
             return new Wall();
         }

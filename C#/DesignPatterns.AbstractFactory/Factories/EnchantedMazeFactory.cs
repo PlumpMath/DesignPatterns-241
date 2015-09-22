@@ -2,29 +2,29 @@
 {
     public class EnchantedMazeFactory : MazeFactoryBase
     {
-        public override DoorBase CreateDoor(RoomBase room1, RoomBase room2)
+        public override Door CreateDoor(Room room1, Room room2)
         {
-            throw new System.NotImplementedException();
+            return new DoorNeedingSpell(room1, room2);
         }
 
-        public override MazeBase CreateMaze()
+        public override Maze CreateMaze()
         {
-            throw new System.NotImplementedException();
+            return new Maze();
         }
 
-        public override RoomBase CreateRoom(int roomNumber)
+        public override Room CreateRoom(int roomNumber)
         {
             return new EnchantedRoom(roomNumber, CastSpell());
+        }
+
+        public override Wall CreateWall()
+        {
+            return new Wall();
         }
 
         private Spell CastSpell()
         {
             return new Spell();
-        }
-
-        public override WallBase CreateWall()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

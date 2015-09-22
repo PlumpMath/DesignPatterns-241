@@ -1,10 +1,23 @@
-﻿namespace DesignPatterns.AbstractFactory
+﻿using System;
+
+namespace DesignPatterns.AbstractFactory
 {
-    public class Door : DoorBase
+    public class Door : MapSite
     {
-        public Door(RoomBase room1, RoomBase room2)
-            : base(room1, room2)
+        private Room _room1;
+        private Room _room2;
+
+        public Door(Room room1, Room room2)
         {
+            _room1 = room1;
+            _room2 = room2;
         }
+
+        public override void Enter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsOpen { get; set; }
     }
 }

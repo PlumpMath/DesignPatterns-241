@@ -1,6 +1,12 @@
-﻿namespace DesignPatterns.AbstractFactory
+﻿using System;
+
+namespace DesignPatterns.AbstractFactory
 {
-    public class Wall : WallBase
+    public class Wall : MapSite
     {
+        public override void Enter()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

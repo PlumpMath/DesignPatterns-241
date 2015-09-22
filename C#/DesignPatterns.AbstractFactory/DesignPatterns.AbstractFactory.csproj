@@ -41,20 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\EnchantedMazeFactory.cs" />
+    <Compile Include="Factories\IBuildMazes.cs" />
+    <Compile Include="Products\Doors\DoorNeedingSpell.cs" />
     <Compile Include="Spell.cs" />
-    <Compile Include="Products\Doors\Door.cs" />
     <Compile Include="Products\Rooms\EnchantedRoom.cs" />
-    <Compile Include="Products\Rooms\Room.cs" />
-    <Compile Include="Products\Walls\Wall.cs" />
-    <Compile Include="Products\Doors\DoorBase.cs" />
-    <Compile Include="Products\Mazes\Maze.cs" />
+    <Compile Include="Products\Doors\Door.cs" />
     <Compile Include="Factories\MazeFactory.cs" />
     <Compile Include="Factories\MazeFactoryBase.cs" />
     <Compile Include="Products\MapSite.cs" />
-    <Compile Include="Products\Mazes\MazeBase.cs" />
+    <Compile Include="Products\Mazes\Maze.cs" />
     <Compile Include="MazeGame.cs" />
-    <Compile Include="Products\Rooms\RoomBase.cs" />
-    <Compile Include="Products\Walls\WallBase.cs" />
+    <Compile Include="Products\Rooms\Room.cs" />
+    <Compile Include="Products\Walls\Wall.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Direction.cs" />
   </ItemGroup>
