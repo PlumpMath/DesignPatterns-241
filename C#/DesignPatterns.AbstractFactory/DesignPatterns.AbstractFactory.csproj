@@ -41,13 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\EnchantedMazeFactory.cs" />
-    <Compile Include="Factories\IBuildMazes.cs" />
+    <Compile Include="Factories\ICreateMazes.cs" />
     <Compile Include="Products\Doors\DoorNeedingSpell.cs" />
     <Compile Include="Spell.cs" />
     <Compile Include="Products\Rooms\EnchantedRoom.cs" />
     <Compile Include="Products\Doors\Door.cs" />
     <Compile Include="Factories\MazeFactory.cs" />
-    <Compile Include="Factories\MazeFactoryBase.cs" />
+    <Compile Include="Factories\AbstractMazeFactory.cs" />
     <Compile Include="Products\MapSite.cs" />
     <Compile Include="Products\Mazes\Maze.cs" />
     <Compile Include="MazeGame.cs" />
@@ -56,11 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Direction.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Products\Abstract\" />
-    <Folder Include="Products\Enchanted\" />
-    <Folder Include="Products\Standard\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

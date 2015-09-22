@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.AbstractFactory
 {
-    public interface IBuildMazes
+    public interface ICreateMazes
     {
         Door CreateDoor(Room room1, Room room2);
 

@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.AbstractFactory
 {
-    public class MazeFactory : MazeFactoryBase
+    public class MazeFactory : AbstractMazeFactory
     {
         public override Maze CreateMaze()
         {

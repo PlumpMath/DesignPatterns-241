@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.AbstractFactory
 {
-    public class EnchantedMazeFactory : MazeFactoryBase
+    public class EnchantedMazeFactory : AbstractMazeFactory
     {
         public override Door CreateDoor(Room room1, Room room2)
         {

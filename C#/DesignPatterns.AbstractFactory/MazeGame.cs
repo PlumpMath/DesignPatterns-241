@@ -2,9 +2,9 @@
 {
     public class MazeGame
     {
-        private readonly IBuildMazes _factory;
+        private readonly ICreateMazes _factory;
 
-        public MazeGame(IBuildMazes factory)
+        public MazeGame(ICreateMazes factory)
         {
             _factory = factory;
         }

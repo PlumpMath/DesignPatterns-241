@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.AbstractFactory
 {
-    public abstract class MazeFactoryBase : IBuildMazes
+    public abstract class AbstractMazeFactory : ICreateMazes
     {
         public abstract Door CreateDoor(Room room1, Room room2);
 
